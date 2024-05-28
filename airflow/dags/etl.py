@@ -88,7 +88,7 @@ with DAG('weather_dag',
     )
 
     slack_notification = SlackWebhookOperator(
-        task_id = 'Slack_Notification',
+        task_id = 'Slack_Notification_Update',
         http_conn_id = "slack_conn_id",
         message = "Data Moved to S3",
         channel = "Daily data loads",
